@@ -1,0 +1,22 @@
+{
+  "name": "monget",
+  "version": "0.1.0",
+  "description": "a commandline tool to run mongo queries to stdout",
+  "dependencies": {
+    "optimist": "~0.3.5",
+    "mongodb": "~1.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {"type": "git", "url": "git@github.com:jden/monget.git"},
+  "keywords": [
+    "mongo",
+    "cli"
+  ],
+  "bin": "./bin/monget.js",
+  "preferGlobal": true,
+  "author": "Jason Denizac <jason@denizac.org>",
+  "license": "APL2"
+}
