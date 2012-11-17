@@ -18,7 +18,7 @@ Example:
 
     monget --conn mongodb://localhost/myDB "db.users.findOne()" > user.json
 
-monget requires a mongodb connection string. From the mongo docs:
+monget requires a [mongodb connection string](http://www.mongodb.org/display/DOCS/Connections). From the mongo docs:
 
     mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 
