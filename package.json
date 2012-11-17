@@ -5,15 +5,12 @@
   "dependencies": {
     "optimist": "~0.3.5"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {"type": "git", "url": "git@github.com:jden/monget.git"},
   "keywords": [
     "mongo",
     "cli"
   ],
-  "bin": "./bin/monget.js",
+  "bin": "./bin/monget",
   "preferGlobal": true,
   "author": "Jason Denizac <jason@denizac.org>",
   "license": "APL2"
