@@ -11,8 +11,8 @@ a commandline tool to run mongo queries to stdout
 
 Options:
 
-  -c, --conn  a mongodb connection string (see http://www.mongodb.org/display/DOCS/Connections)
-  -s, --save  save the connection to a .monget file in the current directory                     [boolean]
+    -c, --conn  a mongodb connection string (see http://www.mongodb.org/display/DOCS/Connections)
+    -s, --save  save the connection to a .monget file in the current directory                     [boolean]
 
 Example:
 
