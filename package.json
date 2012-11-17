@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "a commandline tool to run mongo queries to stdout",
   "dependencies": {
-    "optimist": "~0.3.5",
+    "optimist": "~0.3.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
