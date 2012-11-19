@@ -1,11 +1,15 @@
 {
   "name": "monget",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a commandline tool to run mongo queries to stdout",
   "dependencies": {
-    "optimist": "~0.3.5"
+    "optimist": "~0.3.5",
+    "string": "~1.1.0"
   },
-  "repository": {"type": "git", "url": "git@github.com:jden/monget.git"},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jden/monget.git"
+  },
   "keywords": [
     "mongo",
     "cli"

@@ -28,6 +28,25 @@ eg
 
 If no connection string is passed in the `--conn` argument, monget will check for a connection string in a file called `.monget`. You can call monget with the `--save` flag to save the connection string argument to the .monget file for convenience.
 
+## Shell-friendly syntax!
+
+The things you're going to want to do in the mongoshell are run one-liner queries. As such, we make things easier for you:
+
+ - Automatically prefix commands with `db.`
+ - Automatically append `()` if you don't explicitly invoke a method
+
+This means you can either write
+
+    $ monget "db.MyCollection.findOne()"
+
+(note the quotes necessary in Bash when using parentheses)
+
+or
+
+    $ monget MyCollection.findOne
+
+We're here to make your life easier, because we love you.
+
 ## License
 Written by Jason Denizac <jason@denizac.org>
 

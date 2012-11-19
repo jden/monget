@@ -2,6 +2,7 @@ var opt = require('optimist');
 var fs = require('fs');
 var url = require('url');
 var spawn = require('child_process').spawn;
+var S = require('string');
 
 var opt = opt
 	.usage('Usage: $0 [--conn] "mongoshell javascript"')
@@ -18,7 +19,9 @@ getConnectionString(function (err, connectionString) {
 
 	var connectionInfo = parseMongoConnectionString(connectionString);
 
-	runMongoCommand(connectionInfo, opt.argv._);
+	var command = formatMongoShellCommand(opt.argv._);
+
+	runMongoCommand(connectionInfo, command);
 });
 
 
@@ -107,4 +110,12 @@ function onError(err) {
 	opt.showHelp();
 	console.error(err.message);
 	process.exit(1);
+}
+
+function formatMongoShellCommand(cmd) {
+	if (!S(cmd).startsWith('db.')) cmd = 'db.' + cmd;
+	if (S(cmd).endsWith(';')) cmd = cmd.substr(0, cmd.length-1);
+	var isMethod = /\(.*\)$/;
+	if (!isMethod.test(cmd)) cmd = cmd + '()';
+	return cmd;
 }
