@@ -34,6 +34,7 @@ The things you're going to want to do in the mongoshell are run one-liner querie
 
  - Automatically prefix commands with `db.`
  - Automatically append `()` if you don't explicitly invoke a method
+ - Automatically call `.shellPrint()` for `.find` (default mongoshell interactive behavior)
 
 This means you can either write
 
